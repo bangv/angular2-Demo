@@ -1,0 +1,25 @@
+<script src="forms-builder.component.ts"></script>
+<div class="ui">
+  <h2>
+    Demo Form:sku about
+  </h2>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" >
+    <div class="field">
+      <label for="skuInputGroup">sku</label>
+      <input type="text" id="skuInputGroup" placeholder="SKU" [formControl]="myForm.controls['sku_group']">
+      <p *ngIf="!myForm.controls['sku_group'].valid&&clickAble">sku is invalid</p>
+      <p *ngIf="myForm.controls['sku_group'].hasError('required')&&clickAble">sku is required</p>
+    </div>
+    <div>
+      <label for="skuNameGroup">sku</label>
+      <input type="text" id="skuNameGroup" placeholder="SKU"  [formControl]="myForm.controls['name_group']">
+      <p *ngIf="!myForm.controls['name_group'].valid&&clickAble">name_group is invalid</p>
+      <p *ngIf="myForm.controls['name_group'].hasError('required')&&clickAble">name_group is required</p>
+    </div>
+    <div *ngIf="!myForm.valid&&clickAble">
+      Form is invalid
+    </div>
+    <button type="submit" >Submit</button>
+  </form>
+
+</div>
