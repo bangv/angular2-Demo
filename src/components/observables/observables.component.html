@@ -1,0 +1,15 @@
+<p>
+  observables works!
+</p>
+<div>
+  {{dataObserverManages}}
+</div>
+<div>
+  {{ddataSubscriptionManages}}
+</div>
+<div>
+  {{dataBehaviorSubjectManages}}
+</div>
+<p *ngFor="let data of (goodsList$ | async);let idx = index ">
+  {{data}}
+</p>

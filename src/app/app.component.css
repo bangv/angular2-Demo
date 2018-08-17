@@ -1,0 +1,12 @@
+ul,li{
+  margin-bottom: 100px;
+}
+
+li{
+  display: inline-block;
+  list-style: none;
+  float: left;
+  margin-right: 50px;
+  border: red solid 1px;
+  padding: 20px;
+}

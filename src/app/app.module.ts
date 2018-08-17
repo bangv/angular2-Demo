@@ -10,13 +10,15 @@ import {MyDirectiveDirective} from '../directive/my-directive.directive';
 import {HttpModule} from '@angular/http';
 import {RouterModule, Routes} from '@angular/router';
 import {routes} from '../router/index';
+import { ObservablesComponent } from '../components/observables/observables.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormsComponent,
     FormsBuilderComponent,
-    MyDirectiveDirective
+    MyDirectiveDirective,
+    ObservablesComponent
   ],
   imports: [
     BrowserModule,
