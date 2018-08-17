@@ -19,13 +19,14 @@ export class ObservablesComponent implements OnInit {
   });
   // subject 类型
   ddataSubscriptionManages;
-  dataSubscription = new Subject();
+  dataSubscription: Subject<any> = new Subject();
   // BehaviorSubject 类型 可以传参数
   dataBehaviorSubjectManages;
   dataBehaviorSubject = new BehaviorSubject("我new BehaviorSubject 类型 类型出来的值 可以传参数");
   // 数组类型
   goodsSubject = new BehaviorSubject([]);
-  goodsList$: Observable<Array<any>> = this.goodsSubject.asObservable() as Observable<Array<any>>;
+  goodsList$ = this.goodsSubject.asObservable();
+ // goodsList$ = this.dataSubscription.asObservable();
 
   constructor() {
   }
