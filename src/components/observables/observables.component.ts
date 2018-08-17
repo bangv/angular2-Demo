@@ -26,7 +26,7 @@ export class ObservablesComponent implements OnInit {
   // 数组类型
   goodsSubject = new BehaviorSubject([]);
   goodsList$ = this.goodsSubject.asObservable();
- // goodsList$ = this.dataSubscription.asObservable();
+  // goodsList$ = this.dataSubscription.asObservable();
 
   constructor() {
   }
@@ -38,17 +38,20 @@ export class ObservablesComponent implements OnInit {
 
     setTimeout(() => subscription.unsubscribe(), 2100);
 
-    this.dataSubscription.subscribe((v) => {
+    let test1 = this.dataSubscription.subscribe((v) => {
       this.ddataSubscriptionManages = v;
     });
+    // test1.unsubscribe();取消执行
     this.dataSubscription.next("我new Subject类型出来的值");
-    this.dataBehaviorSubject.subscribe((v) => {
+    let test2 = this.dataBehaviorSubject.subscribe((v) => {
       this.dataBehaviorSubjectManages = v;
     });
+    // test2.unsubscribe();取消执行
     this.goodsSubject.next([1, 2, 3, 4]);
-    this.goodsSubject.subscribe((v) => {
+    let test = this.goodsSubject.subscribe((v) => {
       console.log(v);
     });
+    // test.unsubscribe();取消执行
   }
 
 }
