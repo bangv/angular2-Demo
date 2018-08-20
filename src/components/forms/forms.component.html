@@ -1,6 +1,6 @@
 <div class="ui">
   <h2>
-    Demo Form:sku ngForm
+    Demo Form:sku ngForm以及路由传参数
   </h2>
   <form #f="ngForm" (ngSubmit)="onSubmit(f.value)" >
     <div class="field">
@@ -11,5 +11,11 @@
     </div>
     <button type="submit" >Submit</button>
   </form>
-
+<ul>
+  <li>
+    <a [routerLink]="['/articledetail',1]">第一个</a>
+    <a [routerLink]="['/articledetail',2]">第二个</a>
+    <a [routerLink]="['/articledetail',3]">第三个</a>
+  </li>
+</ul>
 </div>

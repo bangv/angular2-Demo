@@ -11,6 +11,7 @@ import {HttpModule} from '@angular/http';
 import {RouterModule, Routes} from '@angular/router';
 import {routes} from '../router/index';
 import { ObservablesComponent } from '../components/observables/observables.component';
+import { RouterParamsComponent } from '../components/router-params/router-params.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ObservablesComponent } from '../components/observables/observables.comp
     FormsComponent,
     FormsBuilderComponent,
     MyDirectiveDirective,
-    ObservablesComponent
+    ObservablesComponent,
+    RouterParamsComponent
   ],
   imports: [
     BrowserModule,
