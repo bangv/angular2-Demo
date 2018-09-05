@@ -8,7 +8,7 @@ import {RouterParamsComponent} from "../components/router-params/router-params.c
  */
 
 // export const ...
-const routes = [{path: '', redirectTo: 'home', pathMatch: 'full'},
+const routes = [{path: '', redirectTo: 'observables', pathMatch: 'full'},
   {path: 'home', component: FormsComponent}, {path: 'about', component: FormsBuilderComponent}, {
     path: 'observables',
     component: ObservablesComponent
