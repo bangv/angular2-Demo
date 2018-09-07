@@ -14,7 +14,8 @@ export class RouterParamsComponent implements OnInit {
   routerParams: any;
 
   ngOnInit() {
-    console.log(this.route.params)
+    console.log(this.route)
+    console.log('当前路由=================》', this.route.url['value'][0]['path']);
    this.routerParams = this.route.params['value'].id;
   }
 

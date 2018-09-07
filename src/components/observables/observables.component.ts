@@ -3,6 +3,7 @@ import {Subscription} from 'rxjs/Subscription';
 import {Observable} from 'rxjs/observable';
 import {Subject} from 'rxjs/Subject';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: "app-observables",
@@ -28,10 +29,12 @@ export class ObservablesComponent implements OnInit {
   goodsList$ = this.goodsSubject.asObservable();
   // goodsList$ = this.dataSubscription.asObservable();
 
-  constructor() {
+  constructor(public route: ActivatedRoute) {
   }
 
   ngOnInit() {
+    console.log(this.route);
+    console.log('当前路由=================》', this.route.url['value'][0]['path']);
     let subscription = this.dataObserver.subscribe((x) => {
       this.dataObserverManages = x;
     });

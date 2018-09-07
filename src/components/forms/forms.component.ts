@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Http, RequestMethod, RequestOptions} from '@angular/http';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-forms',
@@ -10,12 +11,12 @@ export class FormsComponent implements OnInit {
   data: object = new Object;
   http: Http;
 
-  constructor(http: Http) {
+  constructor(http: Http, public route: ActivatedRoute) {
     this.http = http;
   }
-
   ngOnInit() {
-    // alert(333);
+    console.log(this.route);
+    console.log('当前路由=================》', this.route.url['value'][0]['path']);
   }
 
   onSubmit = (value) => {
